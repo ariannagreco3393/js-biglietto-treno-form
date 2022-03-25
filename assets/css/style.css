@@ -1,0 +1,14 @@
+body {
+    background-color: #AD174C;
+}
+
+.fuxia {
+    color: #AD174C;
+}
+
+.form_control {
+    display: block;
+    width: 200px;
+    border: 1px solid #AD174C;
+    border-radius: 0.3rem;
+}
