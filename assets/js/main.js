@@ -11,8 +11,14 @@ let prezzo_finale;
 
 // chiedere i km al passeggero
 
-let km_da_percorrere = document.getElementById("km_da_percorrere").value;
-console.log(km_da_percorrere);
+let km_da_percorrere = document.getElementById("km_passeggero").value;
+
+
+function () {
+    let km_da_percorrere = document.getElementById("km_passeggero").value;
+    document.getElementById("km_passeggero").innerHTML = km_da_percorrere;
+  }
+
 
 // chiedere l'età del passeggero
 

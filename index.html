@@ -10,14 +10,24 @@
 </head>
 <body>
     <div class="container">
-        <h1 class="text-uppercase text-white text-center">calcola il prezzo del tuo biglietto</h1>
+        <h2 class="text-uppercase text-white text-center">calcola il prezzo del tuo biglietto</h2>
     <form class="bg-light rounded-3 p-3 shadow mt-4">
         <div class="">
           <label for="" class="form-label fuxia">km da percorrere</label>
-          <input type="number" class="form_control" value="20" id="km_da_percorrere">
+          <input type="text" class="form_control" id="km_passeggero">
         </div>
+        <label for="" class="form-label fuxia">Fascia età</label>
+        <select class="form_control">
+            <option value="1">Minorenne</option>
+            <option value="2">Adulto</option>
+            <option value="3">Over65</option>
+          </select>
         <button type="submit" class="btn btn-primary">Submit</button>
       </form>
+      <h2 class="text-uppercase text-white text-center">il tuo biglietto</h2>
+      <div class="biglietto bg-light rounded-3 p-3 shadow mt-4">
+        <p class="costo_ticket">costo biglietto</p>
+      </div>
     </div>
     <script src="./assets/js/main.js"></script>
 </body>
