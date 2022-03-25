@@ -9,37 +9,28 @@ va applicato uno sconto del 40% per gli over 65.
 const prezzo_al_km = 0.21;
 let prezzo_finale;
 
-// chiedere i km al passeggero
+//btn Genera
 
-let km_da_percorrere = document.getElementById("km_passeggero").value;
+let elementGeneraBtn = document.querySelector(".genera_ticket")
 
-
-function () {
+elementGeneraBtn.addEventListener("click", function() {
+    let full_name = document.getElementById("full_name").value;
     let km_da_percorrere = document.getElementById("km_passeggero").value;
-    document.getElementById("km_passeggero").innerHTML = km_da_percorrere;
-  }
+    let eta_passeggero = document.querySelector(".fascia_eta").value;
+    let price_ticket = document.getElementById("adult").value;
+    price_ticket = km_da_percorrere * prezzo_al_km;
+    let price_under_18 = document.getElementById("min").value;
+    price_under_18 = price_ticket - (price_ticket * 0.2)
+    let price_over_65 = document.getElementById("over").value;
+    price_over_65 = price_ticket - (price_ticket * 0.4)
 
-
-// chiedere l'età del passeggero
-
-let eta_passeggero;
-
-
-//prezzo del biglietto
-
-const price_ticket = prezzo_al_km * km_da_percorrere
-
-// prezzo minori di 18
-
-const price_under_18 = price_ticket - (price_ticket * 0.2)
-
-// prezzo over 65
-const price_over_65 = price_ticket - (price_ticket * 0.4)
-
-if (eta_passeggero < 18) {
-    prezzo_finale = price_under_18
-} else if (eta_passeggero > 65) {
-    prezzo_finale = price_over_65
-} else {
-    prezzo_finale = price_ticket
-}
+    if (eta_passeggero < 18) {
+        prezzo_finale = price_under_18
+    } else if (eta_passeggero > 65) {
+        prezzo_finale = price_over_65
+    } else {
+        prezzo_finale = price_ticket
+    }
+    console.log(prezzo_finale);
+  
+});

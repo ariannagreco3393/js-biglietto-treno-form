@@ -12,17 +12,21 @@
     <div class="container">
         <h2 class="text-uppercase text-white text-center">calcola il prezzo del tuo biglietto</h2>
     <form class="bg-light rounded-3 p-3 shadow mt-4">
-        <div class="">
+        <div>
+            <label for="" class="form-label fuxia">Nome e Cognome</label>
+            <input type="text" class="form_control" id="full_name">
+          </div>
+        <div>
           <label for="" class="form-label fuxia">km da percorrere</label>
           <input type="text" class="form_control" id="km_passeggero">
         </div>
         <label for="" class="form-label fuxia">Fascia età</label>
-        <select class="form_control">
-            <option value="1">Minorenne</option>
-            <option value="2">Adulto</option>
-            <option value="3">Over65</option>
+        <select class="fascia_eta form_control">
+            <option id="min">Minorenne</option>
+            <option id="adult">Adulto</option>
+            <option id="over">Over65</option>
           </select>
-        <button type="submit" class="btn btn-primary">Submit</button>
+        <button type="button" class="genera_ticket btn btn-primary">Genera</button>
       </form>
       <h2 class="text-uppercase text-white text-center">il tuo biglietto</h2>
       <div class="biglietto bg-light rounded-3 p-3 shadow mt-4">
