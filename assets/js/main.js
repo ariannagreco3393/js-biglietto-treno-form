@@ -34,5 +34,26 @@ elementGeneraBtn.addEventListener("click", function() {
     } else {
         prezzo_finale = price_ticket
     }
+
+    // stampa biglietto 
+
+    let nome_passeggero = document.querySelector(".nome_passeggero").innerHTML
+    document.querySelector(".nome_passeggero").innerHTML = full_name
+
+    let tariffa = document.querySelector(".tariffa").innerHTML
+    document.querySelector(".tariffa").innerHTML = eta_passeggero
+
+    let costo_ticket = document.querySelector(".costo_biglietto").innerHTML
+    document.querySelector(".costo_biglietto").innerHTML = prezzo_finale
   
 });
+
+let elementAnnullaBtn = document.querySelector(".annulla_ticket")
+
+elementAnnullaBtn.addEventListener("click" , function () {
+    document.querySelector(".nome_passeggero").innerHTML = ""
+    document.querySelector(".tariffa").innerHTML = ""
+    document.querySelector(".costo_biglietto").innerHTML = ""
+
+})
+
