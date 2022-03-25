@@ -14,23 +14,25 @@ let prezzo_finale;
 let elementGeneraBtn = document.querySelector(".genera_ticket")
 
 elementGeneraBtn.addEventListener("click", function() {
+    //chiedi al passeggero km e età
     let full_name = document.getElementById("full_name").value;
     let km_da_percorrere = document.getElementById("km_passeggero").value;
     let eta_passeggero = document.querySelector(".fascia_eta").value;
-    let price_ticket = document.getElementById("adult").value;
+    
+    //applica scontistica in base a età
     price_ticket = km_da_percorrere * prezzo_al_km;
-    let price_under_18 = document.getElementById("min").value;
+
     price_under_18 = price_ticket - (price_ticket * 0.2)
-    let price_over_65 = document.getElementById("over").value;
+    
     price_over_65 = price_ticket - (price_ticket * 0.4)
 
-    if (eta_passeggero < 18) {
+
+    if (eta_passeggero == "young") {
         prezzo_finale = price_under_18
-    } else if (eta_passeggero > 65) {
+    } else if (eta_passeggero == "over") {
         prezzo_finale = price_over_65
     } else {
         prezzo_finale = price_ticket
     }
-    console.log(prezzo_finale);
   
 });
