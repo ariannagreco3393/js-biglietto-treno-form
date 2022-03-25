@@ -43,8 +43,16 @@ elementGeneraBtn.addEventListener("click", function() {
     let tariffa = document.querySelector(".tariffa").innerHTML
     document.querySelector(".tariffa").innerHTML = eta_passeggero
 
+    let carrozza = document.querySelector(".carrozza").innerHTML
+    document.querySelector(".carrozza").innerHTML = Math.floor(Math.random() * 10)+1;
+
+    let codice_cp = document.querySelector(".codice_cp").innerHTML
+    document.querySelector(".codice_cp").innerHTML = Math.floor(Math.random() * 10000) +1;
+
+
+
     let costo_ticket = document.querySelector(".costo_biglietto").innerHTML
-    document.querySelector(".costo_biglietto").innerHTML = prezzo_finale
+    document.querySelector(".costo_biglietto").innerHTML = prezzo_finale.toFixed(2)
   
 });
 
@@ -54,6 +62,8 @@ elementAnnullaBtn.addEventListener("click" , function () {
     document.querySelector(".nome_passeggero").innerHTML = ""
     document.querySelector(".tariffa").innerHTML = ""
     document.querySelector(".costo_biglietto").innerHTML = ""
+    document.querySelector(".carrozza").innerHTML = ""
+    document.querySelector(".codice_cp").innerHTML = ""
 
-})
+});
 
