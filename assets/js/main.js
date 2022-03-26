@@ -20,16 +20,16 @@ elementGeneraBtn.addEventListener("click", function() {
     let eta_passeggero = document.querySelector(".fascia_eta").value;
     
     //applica scontistica in base a età
-    price_ticket = km_da_percorrere * prezzo_al_km;
+    let price_ticket = km_da_percorrere * prezzo_al_km;
 
-    price_under_18 = price_ticket - (price_ticket * 0.2)
+    let price_under_18 = price_ticket - (price_ticket * 0.2)
     
-    price_over_65 = price_ticket - (price_ticket * 0.4)
+    let price_over_65 = price_ticket - (price_ticket * 0.4)
 
 
-    if (eta_passeggero == "young") {
+    if (eta_passeggero == ".young") {
         prezzo_finale = price_under_18
-    } else if (eta_passeggero == "over") {
+    } else if (eta_passeggero == ".over") {
         prezzo_finale = price_over_65
     } else {
         prezzo_finale = price_ticket
@@ -41,15 +41,13 @@ elementGeneraBtn.addEventListener("click", function() {
     document.querySelector(".nome_passeggero").innerHTML = full_name
 
     let tariffa = document.querySelector(".tariffa").innerHTML
-    document.querySelector(".tariffa").innerHTML = eta_passeggero
+    document.querySelector(".tariffa").innerHTML = eta_passeggero  
 
     let carrozza = document.querySelector(".carrozza").innerHTML
     document.querySelector(".carrozza").innerHTML = Math.floor(Math.random() * 10)+1;
 
     let codice_cp = document.querySelector(".codice_cp").innerHTML
-    document.querySelector(".codice_cp").innerHTML = Math.floor(Math.random() * 10000) +1;
-
-
+    document.querySelector(".codice_cp").innerHTML = Math.floor(Math.random() * 100000) +1;
 
     let costo_ticket = document.querySelector(".costo_biglietto").innerHTML
     document.querySelector(".costo_biglietto").innerHTML = prezzo_finale.toFixed(2)

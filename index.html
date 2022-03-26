@@ -12,26 +12,37 @@
     <div class="container">
         <h2 class="text-uppercase text-white text-center">calcola il prezzo del tuo biglietto</h2>
     <form class="bg-light rounded-3 p-3 shadow mt-4">
-        <div>
-            <label for="" class="form-label fuxia">Nome e Cognome</label>
-            <input type="text" class="form_control" id="full_name">
-          </div>
-        <div>
-          <label for="" class="form-label fuxia">km da percorrere</label>
-          <input type="text" class="form_control" id="km_passeggero">
+        
+        <div class="row">
+            <div class="col">
+                <label for="" class="form-label fuxia">Nome e Cognome</label>
+                <input type="text" class="form_control" id="full_name">
+            </div>
+            <div class="col">
+                <label for="" class="form-label fuxia">Km da percorrere</label>
+                <input type="text" class="form_control" id="km_passeggero">
+            </div>
+            <div class="col">
+                <label for="" class="form-label fuxia">Fascia età</label>
+                <select class="fascia_eta form_control">
+                <option class="young">Minorenne</option>
+                <option class="adult">Adulto</option>
+                <option class="over">Over65</option>
+                </select>
+            </div> 
         </div>
-        <label for="" class="form-label fuxia">Fascia età</label>
-        <select class="fascia_eta form_control">
-            <option value="young">Minorenne</option>
-            <option value="adult">Adulto</option>
-            <option value="over">Over65</option>
-          </select>
-        <button type="button" class="genera_ticket btn btn-primary mt-2">Genera</button>
-        <button type="button" class="annulla_ticket btn btn-primary mt-2">Annulla</button>
+        <div class="row mt-4">
+            <div class="col text-end">
+                <button type="button" class="genera_ticket btn btn-secondary fuxia mt-2">Genera</button>
+            </div>
+            <div class="col">
+                <button type="button" class="annulla_ticket btn btn-secondary fuxia mt-2">Annulla</button>
+            </div>
+        </div>
       </form>
       <h2 class="text-uppercase text-white text-center">il tuo biglietto</h2>
-      <div class="biglietto bg-light rounded-3 p-3 shadow mt-4">
-        <h3 class="costo_ticket text-uppercase">dettagli passeggeri</h3>
+      <div class="biglietto bg-light p-3 shadow mt-4">
+        <h3 class="costo_ticket text-uppercase">dettaglio passeggeri</h3>
         <h5>nome passeggero</h5>
         <p class="nome_passeggero"></p>
         <h5>Tariffa</h5>

@@ -6,6 +6,10 @@ body {
     color: #AD174C;
 }
 
+.bg_fuxia {
+    background-color: #AD174C;
+}
+
 .form_control {
     display: block;
     width: 200px;
